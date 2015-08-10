@@ -252,6 +252,10 @@
       return this.myName;
     },
 
+    key: function() {
+      return this.myName;
+    },
+
     ref: function() {
       return this;
     },
@@ -756,7 +760,8 @@
     return {
       val: function() { return data; },
       ref: function() { return ref; },
-      name: function() { return ref.name() },
+      name: function() { return ref.key() },
+      key: function() { return ref.key() },
       getPriority: function() { return pri; }, //todo
       forEach: function(cb, scope) {
         _.each(data, function(v, k, list) {
